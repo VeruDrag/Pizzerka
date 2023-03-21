@@ -1,0 +1,292 @@
+/***************** Tyto používáme stále dokola ***************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.heading-main h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+.heading-main h2:after {
+    content: "";
+    /*sem bych dala ikonku, ale těmi "" říkám, že tam nic nechci*/
+    display: block;
+    width: 150px;
+    border-bottom: 2px solid salmon;
+    margin: 4px auto;
+}
+/****************** Až sem***************/
+header {
+    background:  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(img/pizza-g97d58b4e2_1920.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    /*zápis na to, aby se obrázek hýbal při scrolování*/
+}
+#logo img {
+    width: 10%;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+nav ul {
+    float: right;
+    margin-top: 35px;
+}
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+nav ul li a:link,
+nav ul li a:visited {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    /*transparent je průhledná barva*/
+}
+nav ul li a:hover,
+nav ul li a:active {
+    transition: border-bottom 0.5s;
+    border-bottom: 2px solid salmon;
+}
+.headerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.headerText h1 {
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+}
+/****************- Tlačítka **************************/
+.btn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    margin-top: 7px;
+    display: inline-block;
+    margin-left: 15px;
+}
+.btn-full:link,
+.btn-full:visited {
+    background: salmon;
+}
+.btn-full:hover,
+.btn-full:active {
+    transition: background 0.5s;
+    background-color: rgb(173, 85, 76);
+}
+.btn-empty:link,
+.btn-empty:visited {
+    margin-left: 15px;
+}
+.btn-empty:hover,
+.btn-empty:active {
+    transition: background 0.5s;
+    background-color: salmon;
+}
+/***********About us***********/
+.pizza-example img {
+    width: 100%;
+    border-radius: 2%;
+    box-shadow: 2px 2px 7px rgb(46, 71, 46);
+}
+.pizza-info img {
+    width: 100%;
+    border-radius: 2%;
+    height: 320px;
+    box-shadow: 2px 2px 7px rgb(46, 71, 46);
+}
+.text-pizza {
+    margin-bottom: 30px;
+}
+.text-pizza div {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 12px;
+    float: left;
+}
+.text-pizza p {
+    margin-left: 60px;
+    font-size: 16px;
+}
+/*****************References******************/
+.references {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+    url(img/pozadiRef.jpg);
+    background-attachment: fixed;
+      /*zápis na to, aby se obrázek hýbal při scrolování*/
+}
+.references h2 {
+    color: #fff;
+    padding-top: 20px;
+}
+.references h2:after {
+    border-bottom: 2px solid #fff;
+}
+.ref-text {
+    color: #fff;
+}
+.ref-text p {
+    font-style: italic;
+}
+.photo-name {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.photo-name p {
+    padding: 13px;
+    margin-left: 50px;
+    font-style: normal;
+}
+.photo-name img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    float: left;
+    filter: contrast(1.1);
+}
+.photo-segment li {
+    list-style-type: none;
+    /*žádný odrážky u seznamu*/
+    background-color: rgb(14, 13, 13);
+    overflow: hidden;
+/*to co přeteklo, tak skryj*/
+height: 300px;
+}
+.photo-segment img {
+    transition: transform 0.5s, opacity 0.5s;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.6;
+    /*průhlednost*/
+    transform: scale(1.15);
+    /*zvětší se */
+}
+.photo-segment img:hover {
+    /*plynulost*/
+    transform: scale(1);
+    opacity: 1;
+    /*nyní je přuhlednost 100% (tudíž výchozí hodnota*/
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.5s;
+    object-fit: cover;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+.contact-form {
+    width: 700px;
+    text-align: center;
+}
+.contact-form input {
+    width: 50%;
+    border-radius: 7px;
+    border: 1px black solid;
+    margin: 5px 0px;
+    padding: 7px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px grey;
+    font-family: Arial;
+}
+.contact-form textarea {
+    width: 50%;
+    border-radius: 7px;
+    border: 2px black solid;
+    margin-top: 1%;
+    box-shadow: 5px 5px 5px grey;
+    font-family: Arial;
+}
+input[type="submit"] {
+    background-color: #fff;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    /*tučné písmo*/
+}
+input[type="submit"]:hover {
+    background-color: salmon;
+    transition: background-color 0.5s;
+}
+.footer-page {
+    background: linear-gradient(rgb(250, 128, 114, 0.2),rgba(177, 70, 70, 0.6),white);
+    margin-top: 30px;
+}
+.social {
+    text-align: center;
+    margin: 10px 0;
+}
+.social img {
+    width: 50px;
+    height: 50px;
+}
+.fb {
+    max-height: 41px;
+    max-width: 46px;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+.social p {
+    display: inline;
+    margin-right: 10px;
+}
+.social p a:link,
+.social p a:visited {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    
+}
+.social p a:hover,
+.social p a:active {
+    color: #fff;
+}
+.footer-text {
+    text-align: center;
+    color: black;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+.clearfix {zoom: 1}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+    height: 0;
+    visibility: hidden;
+}
