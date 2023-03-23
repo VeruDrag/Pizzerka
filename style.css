@@ -204,11 +204,11 @@ height: 300px;
     z-index: 1;
 }
 .contact-form {
-    width: 700px;
+    max-width: 700px;
     text-align: center;
 }
 .contact-form input {
-    width: 50%;
+    width: 80%;
     border-radius: 7px;
     border: 1px black solid;
     margin: 5px 0px;
@@ -218,7 +218,7 @@ height: 300px;
     font-family: Arial;
 }
 .contact-form textarea {
-    width: 50%;
+    width: 80%;
     border-radius: 7px;
     border: 2px black solid;
     margin-top: 1%;
